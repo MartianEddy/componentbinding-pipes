@@ -1,0 +1,14 @@
+
+
+
+<button (click)="addTrainee()">Add Student</button>
+
+<input type="text" class="search" placeholder="Search .." [(ngModel)]="searchstring">
+<div class="header">
+    <p> Trainee Name</p>
+    <p> Trainee Age</p>
+</div>
+<div class ='content' *ngFor="let trainee of trainees | search:searchstring | sort">
+    <p>{{trainee.name | reverse}}</p>
+    <p> {{trainee.age}}</p>
+</div>
